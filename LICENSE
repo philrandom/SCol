@@ -35,4 +35,5 @@ Other licence are also present in "vendor" directory.
 "monolog/monolog"  is under   MIT   licence.
 "psr/log"          is under   MIT   licence.
 
-The "f3il" is an external component with its own licence. "f3il" is not licenced.
+The "f3il" is an external component with its own licence. "f3il" is not licenced,
+and is not written by Philippe Krejčí nor Yanis Fatmi.
