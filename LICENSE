@@ -27,3 +27,12 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+=================================================================================
+
+Other licence are also present in "vendor" directory.
+"composer"         is under   MIT   licence.
+"monolog/monolog"  is under   MIT   licence.
+"psr/log"          is under   MIT   licence.
+
+The "f3il" is an external component with its own licence. "f3il" is not licenced.
