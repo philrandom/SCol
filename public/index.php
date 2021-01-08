@@ -1,5 +1,3 @@
-<h1>Philippe est beau</h1>
-
 <?php
 
     require_once "../f3il/f3il.php";
