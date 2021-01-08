@@ -14,7 +14,7 @@ class Logout implements \f3il\Module
         $user = $auth->getUser();
         ?>
         <div>
-            <p>Bonjour, <?php echo $user['identifiant'];?>.</p>    
+            <p>Bonjour, <?php echo $user['identifiant'];?>. Vous êtes un <?php echo $user['type'];?>.</p>    
             <a href="?controller=index&action=logout"><button>Se déconnecter</button></a>
         </div>
         <?php
