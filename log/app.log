@@ -1,1 +1,4 @@
 [2021-01-08T09:34:48.880456+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\indexController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Application.php","line":70} []
+[2021-01-08T09:52:22.784731+00:00] f3il.ERROR: Page : fichier de template introuvable../application/templates/simple.template.php {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":43} []
+[2021-01-08T09:53:04.739940+00:00] f3il.ERROR: Page : aucune classe ne correspond au module Menu {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":87} []
+[2021-01-08T09:54:13.971289+00:00] f3il.ERROR: Page : aucune classe ne correspond au module Menu {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":87} []
