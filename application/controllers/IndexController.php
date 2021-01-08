@@ -9,7 +9,7 @@ class IndexController extends \f3il\Controller
 {
     public function getDefaultActionName()
     {
-        return "index";
+        return "Index";
     }
 
     public function indexAction() {
