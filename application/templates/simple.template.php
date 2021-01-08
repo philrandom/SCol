@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Simple Template</h1>
+    <?php $this->insertModule("Logout");?>
     <?php $this->insertView();?>
     <pre><?php print_r($_SESSION); echo "\n".session_id();?></pre>
 </body>

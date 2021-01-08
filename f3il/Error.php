@@ -36,7 +36,7 @@ class Error extends \Exception
         $line = $this->getLine();
         $function = $trace[0]['function'].'()';
         require $this->renderFile;
-        die("nickel");
+        die("Allez, du nerf.");
     }
 
     private function productionModeRender() {

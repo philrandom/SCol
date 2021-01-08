@@ -7,6 +7,7 @@ class UtilisateursModel implements \f3il\AuthenticationInterface
     {
         return [
             "id" => "id",
+            "type" => "type",
             "login" => "identifiant",
             "password" => "motdepasse"
         ];        
