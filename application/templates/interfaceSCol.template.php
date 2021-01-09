@@ -9,8 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Simple Template</h1>
+    <h1>interfaceSCol Template</h1>
     <?php $this->insertModule("Logout");?>
+    <?php $this->insertModule("Interfacemail");?>
     <?php $this->insertView();?>
     <pre><?php print_r($_SESSION); echo "\n".session_id();?></pre>
 </body>
