@@ -13,6 +13,5 @@
     <?php $this->insertModule("Logout");?>
     <?php $this->insertModule("Interfacemail");?>
     <?php $this->insertView();?>
-    <pre><?php print_r($_SESSION); echo "\n".session_id();?></pre>
 </body>
 </html>
