@@ -15,7 +15,7 @@ class IndexController extends \f3il\Controller
     public function indexAction() {
         $auth = \f3il\Authentication::getInstance();
         if($auth->isLoggedIn()) {
-            \f3il\Application::redirect('?controller=accueil&action=accueil');
+            \f3il\Application::redirect('?controller=Accueil&action=accueil');
         }
 
         $page = \f3il\Page::getInstance();
