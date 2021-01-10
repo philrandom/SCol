@@ -9,9 +9,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>interfaceSCol Template</h1>
-    <?php $this->insertModule("Logout");?>
-    <?php $this->insertModule("Interfacemail");?>
+    <h1>Vie Scol template</h1>
+    <div class="row mt-5">
+        <div class="col-md-2">
+            <?php $this->insertModule("Logout");?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <?php $this->insertModule("Interfacemail");?>
+        </div>
+    </div>
     <?php $this->insertView();?>
 </body>
 </html>
