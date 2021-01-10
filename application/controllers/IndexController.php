@@ -57,10 +57,4 @@ class IndexController extends \f3il\Controller
         $auth->logout();
         \f3il\Application::redirect('?controller=index&action=index');
     }
-
-    public function demoAction() {
-        $auth = \f3il\Authentication::getInstance();
-        var_dump($auth);
-        die();
-    }
 }

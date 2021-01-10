@@ -36,3 +36,7 @@
 [2021-01-08T15:54:54.040553+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Application.php","line":70} []
 [2021-01-08T15:57:14.433932+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Application.php","line":70} []
 [2021-01-08T15:59:29.222830+00:00] f3il.ERROR: Controller : action indisponible 'accueil' pour le contrôleur app\controllers\AccueilController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Controller.php","line":13} []
+[2021-01-10T13:21:34.357002+00:00] f3il.ERROR: Page : aucun template renseigné {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":56} []
+[2021-01-10T13:24:49.277771+00:00] f3il.ERROR: Page : aucun template renseigné {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":56} []
+[2021-01-10T13:46:09.869823+00:00] f3il.ERROR: Page : aucun template renseigné {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":56} []
+[2021-01-10T13:46:50.456765+00:00] f3il.ERROR: Page : aucun template renseigné {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":56} []
