@@ -57,6 +57,7 @@ class Interfacemail implements \f3il\Module
       </button>
     </h2>
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+
     </div>
   </div>
 </div>
