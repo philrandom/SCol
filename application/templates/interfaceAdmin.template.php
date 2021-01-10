@@ -20,6 +20,7 @@
             <?php $this->insertModule("Interfacemail");?>
         </div>
     </div>
+
     <?php $this->insertView();?>
 
 

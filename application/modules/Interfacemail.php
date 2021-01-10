@@ -57,13 +57,14 @@ class Interfacemail implements \f3il\Module
       </button>
     </h2>
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-      <!-- insérer ici les promotions
-      <div class="accordion-body"><a href="">CPI1</a></div>
-      -->
+
     </div>
   </div>
 </div>
 
 <?php
+	foreach( InterfacemailModel::getPromotion() as $prom)
+		echo '<div class="accordion-body"><a href="">'.$prom.'</a></div>';
     }
 }
+?>
