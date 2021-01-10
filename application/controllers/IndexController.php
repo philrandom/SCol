@@ -19,7 +19,7 @@ class IndexController extends \f3il\Controller
         }
 
         $page = \f3il\Page::getInstance();
-        $page->init('simple','index');
+        $page->init('index','index');
 
         $page->login = "";
         $page->password = "";
