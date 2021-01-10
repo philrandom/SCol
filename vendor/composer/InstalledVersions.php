@@ -24,24 +24,24 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'e8cd3e4aa69643821ef5771ca2e65e4c6ef71bfc',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'e8cd3e4aa69643821ef5771ca2e65e4c6ef71bfc',
     ),
     'monolog/monolog' => 
     array (
@@ -66,6 +66,22 @@ private static $installed = array (
       'provided' => 
       array (
         0 => '1.0.0',
+      ),
+    ),
+    'twbs/bootstrap' => 
+    array (
+      'pretty_version' => 'v4.5.3',
+      'version' => '4.5.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a716fb03f965dc0846df479e14388b1b4b93d7ce',
+    ),
+    'twitter/bootstrap' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v4.5.3',
       ),
     ),
   ),
