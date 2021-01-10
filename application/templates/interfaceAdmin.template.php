@@ -10,7 +10,16 @@
 </head>
 <body>
     <h1>Admin Template</h1>
-    <?php $this->insertModule("Logout");?>
+    <div class="row mt-5">
+        <div class="col-md-2">
+            <?php $this->insertModule("Logout");?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <?php $this->insertModule("Interfacemail");?>
+        </div>
+    </div>
     <?php $this->insertView();?>
 </body>
 </html>
