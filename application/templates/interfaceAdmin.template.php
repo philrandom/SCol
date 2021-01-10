@@ -11,6 +11,7 @@
 <body>
     <h1>Admin Template</h1>
     <?php $this->insertModule("Logout");?>
+    <?php $this->insertModule("Interfacemail");?>
     <?php $this->insertView();?>
 </body>
 </html>
