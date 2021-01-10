@@ -2,10 +2,6 @@
 
 namespace app\modules;
 
-use app\models\InterfacemailModel;
-
-//use app\models\InterfacemailModel;
-
 class Interfacemail implements \f3il\Module
 {
     public function render() {
@@ -61,17 +57,18 @@ class Interfacemail implements \f3il\Module
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
 <?php
 
-    echo $this->eleves2;
-?>
+	$db = \f3il\Database::getInstance();
+        $req = $db->prepare("SELECT DISTINCT promotion FROM eleves2 order by 1;");
+        try {
+            $req->execute();
+            $data = $req->fetchAll();
+	    foreach( $data as $prom )
+		    echo '<div class="accordion-body"><a href="">'.$prom["promotion"].'</a></div>';
+        } catch (\PDOException $ex) {
+            throw new Error("InterfacemailModel : erreur SQL{$ex->getMessage()}");
+        }
 
-      <div class="accordion-body"><a href="">CPI1</a></div>
-      <div class="accordion-body"><a href="">CPI2</a></div>
-      <div class="accordion-body"><a href="">I1</a></div>
-      <div class="accordion-body"><a href="">I2</a></div>
-      <div class="accordion-body"><a href="">I3</a></div>
-      <div class="accordion-body"><a href="">B3</a></div>
-      <div class="accordion-body"><a href="">M1</a></div>
-      <div class="accordion-body"><a href="">M2</a></div>
+?>
     </div>
   </div>
 </div>
