@@ -1,9 +1,12 @@
 <?php
 namespace app\models;
 
-class InterfacemailModel 
+use \f3il\Database;
+use \f3il\errors\SqlError;
+use \f3il\Error;
+
+class InterfacemailModel
 {
-   
     public static function getPromotion()
     {
         $db = \f3il\Database::getInstance();
@@ -11,9 +14,10 @@ class InterfacemailModel
         try {
             $req->execute();
             $data = $req->fetch();
-        } catch(\PDOException $exp) {
-            throw new \f3il\errors\SqlError($exp->getMessage(),$req,$exp);
+            echo "cc";
+        } catch (\PDOException $ex) {
+            throw new Error("InterfacemailModel : erreur SQL{$ex->getMessage()}");
+            return $data;
         }
-        return $data;        
     }
-  }
+}

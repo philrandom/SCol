@@ -2,6 +2,10 @@
 
 namespace app\modules;
 
+use app\models\InterfacemailModel;
+
+//use app\models\InterfacemailModel;
+
 class Interfacemail implements \f3il\Module
 {
     public function render() {
@@ -56,8 +60,9 @@ class Interfacemail implements \f3il\Module
     </h2>
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
 <?php
-		echo getPromotion(); 
-	}?>
+
+    echo $this->eleves2;
+?>
 
       <div class="accordion-body"><a href="">CPI1</a></div>
       <div class="accordion-body"><a href="">CPI2</a></div>
