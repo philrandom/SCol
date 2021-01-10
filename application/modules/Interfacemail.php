@@ -2,6 +2,8 @@
 
 namespace app\modules;
 
+use app\models\InterfacemailModel;
+
 class Interfacemail implements \f3il\Module
 {
     public function render() {
@@ -55,24 +57,13 @@ class Interfacemail implements \f3il\Module
       </button>
     </h2>
     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-<?php
-
-	$db = \f3il\Database::getInstance();
-        $req = $db->prepare("SELECT DISTINCT promotion FROM eleves2 order by 1;");
-        try {
-            $req->execute();
-            $data = $req->fetchAll();
-	    foreach( $data as $prom )
-		    echo '<div class="accordion-body"><a href="">'.$prom["promotion"].'</a></div>';
-        } catch (\PDOException $ex) {
-            throw new Error("InterfacemailModel : erreur SQL{$ex->getMessage()}");
-        }
-
-?>
     </div>
   </div>
 </div>
 
 <?php
+	foreach( InterfacemailModel::getPromotion() as $prom)
+		echo '<div class="accordion-body"><a href="">'.$prom.'</a></div>';
     }
 }
+?>

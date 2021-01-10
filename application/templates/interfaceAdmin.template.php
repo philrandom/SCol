@@ -10,7 +10,6 @@
 </head>
 <body>
     <h1>Admin Template</h1>
-<<<<<<< HEAD
     <div class="row mt-5">
         <div class="col-md-2">
             <?php $this->insertModule("Logout");?>
@@ -21,10 +20,7 @@
             <?php $this->insertModule("Interfacemail");?>
         </div>
     </div>
-=======
-    <?php $this->insertModule("Logout");?>
-    <?php $this->insertModule("Interfacemail");?>
->>>>>>> cbc22fb2052000984a8a879158a9e3c1ee9234da
+
     <?php $this->insertView();?>
 </body>
 </html>
