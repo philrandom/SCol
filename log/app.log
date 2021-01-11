@@ -93,3 +93,4 @@
 [2021-01-11T12:56:27.741108+00:00] f3il.ERROR: Page : clé inexistante eleves2 {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-11T12:56:45.389673+00:00] f3il.ERROR: Page : clé inexistante eleves2 {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-11T13:05:16.365247+00:00] f3il.ERROR: Page : clé inexistante eleves2 {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
+[2021-01-11T14:26:01.464505+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []

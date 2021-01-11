@@ -6,18 +6,16 @@ class DatagridModel
 {
     public static function getAll()
     {
-        $r = '[';
-        $arr = array();
+        $r = "[";
         $db = \f3il\Database::getInstance();
-        $req = $db->prepare("SELECT DISTINCT nom, prenom FROM eleves2");
+        $req = $db->prepare("SELECT nom, prenom FROM eleves2 ");
         try {
             $req->execute();
             $data = $req->fetchAll();
             foreach($data as $k=>$d)
-                $r = $r."['".$k."'=>'".$d."'],";
-            $r[strlen($r)-1] = ' ';
-            $r = $r."]";
-            return $r;
+            	$r = $r."['".$d['nom']."','".$d['prenom']."'],";
+	    $r[strlen($r)-1]=' ';
+	    return $r."]"; 
         } catch (\PDOException $ex) {
             throw new Error("InterfacemailModel : erreur SQL{$ex->getMessage()}");
         }

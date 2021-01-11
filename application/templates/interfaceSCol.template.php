@@ -35,11 +35,10 @@
 
 
 <script>
-let data = JSON.parse('<?php echo filter_var(json_encode($this->eleveList), FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);?>');
 
 new gridjs.Grid({
   columns: ["nom", "prenom"],
-  data: data
+  data: <?php echo $this->eleveList; ?>
 }).render(document.getElementById("wrapper2"));
 </script>
 </html>
