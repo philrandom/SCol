@@ -52,3 +52,7 @@
 [2021-01-10T15:53:34.055285+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\indexController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
 [2021-01-10T15:55:47.151056+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
 [2021-01-10T17:43:46.057125+00:00] f3il.ERROR: Page : la classe app\modules\Interfacemail ne respecte pas l'interface Module {"file":"/usr/local/www/SCol/f3il/Page.php","line":93} []
+[2021-01-11T09:02:41.686204+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\indexController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-11T09:03:25.314153+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-11T09:03:45.435019+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\indexController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-11T09:04:38.338443+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
