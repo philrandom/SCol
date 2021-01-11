@@ -19,6 +19,9 @@
         <div class="col">
             <?php $this->insertModule("Interfacemail");?>
         </div>
+        <div class="col">
+            <?php $this->insertModule("Datagrid");?>
+        </div>
     </div>
     <?php $this->insertView();?>
 </body>
