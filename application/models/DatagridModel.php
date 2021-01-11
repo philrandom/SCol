@@ -8,16 +8,16 @@ class DatagridModel
     {
         $r = "[";
         $db = \f3il\Database::getInstance();
-        $req = $db->prepare("SELECT nom, prenom FROM eleves2 ");
+        $req = $db->prepare("SELECT nom, prenom FROM eleves2 limit 354");
         try {
             $req->execute();
             $data = $req->fetchAll();
             foreach($data as $k=>$d)
-            	$r = $r."['".$d['nom']."','".$d['prenom']."'],";
+            	$r = $r."[\"".$d['nom']."\",\"".$d['prenom']."\"],";
 	    $r[strlen($r)-1]=' ';
 	    return $r."]"; 
         } catch (\PDOException $ex) {
-            throw new Error("InterfacemailModel : erreur SQL{$ex->getMessage()}");
+            throw new Error("DatagridModel : erreur SQL{$ex->getMessage()}");
         }
     }
 }

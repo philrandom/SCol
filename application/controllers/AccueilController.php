@@ -30,7 +30,7 @@ class AccueilController extends \f3il\Controller
         }
         $page->eleveList = DatagridModel::getAll();
     
-       /* $page->eleveList = [
+        /*$page->eleveList = [
             [
                 'nom' => '<h1>abc</h1>',
                 'prenom' => 'cde'
