@@ -12,33 +12,23 @@
 </head>
 
 <body>
-    <h1>Vie Scol template</h1>
-    <div class="row mt-5">
-        <div class="col-md-2">
-            <?php $this->insertModule("Logout"); ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <?php $this->insertModule("Interfacemail"); ?>
-        </div>
-        <div class="col">
-            <div id="wrapper2"></div>
-        </div>
-        <div class="col">
+    <div class="container">
+        <h1>Vie Scol template</h1>
+        <?php $this->insertModule("Logout"); ?>
+        <div>
+            <div>
+                <?php $this->insertModule("Interfacemail"); ?>
+            </div>
+            <div>
+                
+            </div>
+            <div >
             <?php $this->insertView(); ?>
+            </div>
         </div>
-    </div>
+        <?php $this->insertModule("Datagrid"); ?>
+        
+        <script src="assets/js/bootstrap.min.js"></script>
 </body>
-<script src="https://unpkg.com/gridjs/dist/gridjs.development.js"></script>
 
-
-
-<script>
-
-new gridjs.Grid({
-  columns: ["nom", "prenom"],
-  data: <?php echo $this->eleveList; ?>
-}).render(document.getElementById("wrapper2"));
-</script>
 </html>

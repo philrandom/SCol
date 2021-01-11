@@ -27,20 +27,9 @@ class AccueilController extends \f3il\Controller
 		$page->init('interfaceSCol', 'accueil');
 	} else {
 		die("Connexion absurde");
-        }
-        $page->eleveList = DatagridModel::getAll();
-    
-        /*$page->eleveList = [
-            [
-                'nom' => '<h1>abc</h1>',
-                'prenom' => 'cde'
-            ],
-            [
-                'nom' => 'bsod',
-                'prenom' => 'jscn'
-            ]
-    
-        ];*/
+    }
+
+    $page->eleveList = DatagridModel::getAll();
     }
 
     
