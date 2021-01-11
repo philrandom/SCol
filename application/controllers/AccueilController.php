@@ -1,6 +1,7 @@
 <?php
 namespace app\controllers;
 
+use app\models\DatagridModel;
 use app\models\UtilisateursModel;
 use f3il\helpers\CsrfHelper;
 use f3il\Error;
@@ -26,6 +27,21 @@ class AccueilController extends \f3il\Controller
 		$page->init('interfaceSCol', 'accueil');
 	} else {
 		die("Connexion absurde");
-    	}
+        }
+        $page->eleveList = DatagridModel::getAll();
+    
+       /* $page->eleveList = [
+            [
+                'nom' => '<h1>abc</h1>',
+                'prenom' => 'cde'
+            ],
+            [
+                'nom' => 'bsod',
+                'prenom' => 'jscn'
+            ]
+    
+        ];*/
     }
+
+    
 }

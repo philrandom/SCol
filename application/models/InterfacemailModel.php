@@ -1,5 +1,6 @@
 <?php
 namespace app\models;
+use f3il\Error;
 
 class InterfacemailModel
 {
@@ -22,4 +23,3 @@ class InterfacemailModel
 		}
 	}	
 }
-?>
