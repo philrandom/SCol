@@ -8,7 +8,7 @@ class DatagridModel
     {
         $r = "[";
         $db = \f3il\Database::getInstance();
-        $req = $db->prepare("SELECT nom, prenom FROM eleves2 limit 354");
+        $req = $db->prepare("SELECT nom, prenom FROM eleves2");
         try {
             $req->execute();
             $data = $req->fetchAll();
