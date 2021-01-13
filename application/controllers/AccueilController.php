@@ -22,7 +22,7 @@ class AccueilController extends \f3il\Controller
         $page = \f3il\Page::getInstance();
 
 	if ($user['type'] == 'administrateur') {
-		$page->init('interfaceAdmin', 'accueil');
+		$page->init('interfaceAdmin', 'Accueil');
 	} elseif($user['type'] == 'enseignant') {
 		$page->init('interfaceSCol', 'accueil');
 	} else {

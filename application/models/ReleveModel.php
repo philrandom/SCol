@@ -21,16 +21,19 @@ class ReleveModel
 		}
 	}
 
-	public static function getByTag($flag) {
+	public static function getByTag($flag,$prof_nom=NULL) {
 		if( !in_array($flag,self::$flags) ) {
-			//throw new Error("ReleveModel : erreur d'entrée (flag invalide)");
-			return -1;
+			throw new Error("ReleveModel : erreur d'entrée (flag invalide)");
 		}
 		$sql =  'SELECT value->"$.promotion", value->"$.prof_nom", value->"$.date_a_rendre" '
 			.' from releves'
 			.' where value->>"$.tag" like :flag';
-		return ReleveModel::req($sql,array(":flag"=>$flag));
-
+		if( $prof_nom == NULL )
+			return ReleveModel::req($sql,array(":flag"=>$flag));
+		else {
+			$sql = $sql.' and value->>"$.prof_nom" like :prof_nom';
+			return ReleveModel::req($sql,array(":flag"=>$flag,":prof_nom"=>$prof_nom));
+		}
 	}
 
 }
