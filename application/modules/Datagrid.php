@@ -18,12 +18,11 @@ class Datagrid implements \f3il\Module
                 data: <?php echo DatagridModel::getAll(); ?>,
                 pagination: {
                     enabled: true,
-                    limit: 40,
+                    limit: 20,
                     summary: false
                 }
             }).render(document.getElementById("wrapper5"));
         </script>
-
 <?php
     }
 }
