@@ -30,7 +30,5 @@ class AccueilController extends \f3il\Controller
     }
 
     $page->eleveList = DatagridModel::getAll();
-    }
-
-    
+    }    
 }

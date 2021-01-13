@@ -15,7 +15,7 @@ class Datagrid implements \f3il\Module
             new gridjs.Grid({
                 columns: ["Nom", "Prénom", "Cycle", "Promotion", "Groupe"],
                 sort: true,
-                data: <?php echo DatagridModel::getAll(); ?>,
+                data: <?php echo DatagridModel::getElevesFromPromo($_GET['prom']); ?>,
                 pagination: {
                     enabled: true,
                     limit: 20,

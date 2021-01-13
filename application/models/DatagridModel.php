@@ -20,4 +20,21 @@ class DatagridModel
             throw new Error("DatagridModel : erreur SQL{$ex->getMessage()}");
         }
     }
+
+    public static function getElevesFromPromo($prom)
+    {
+        $r = "[";
+        $db = \f3il\Database::getInstance();
+        $req = $db->prepare("SELECT nom, prenom, cycle, promotion, groupe FROM eleves2 WHERE promotion=:promotion");
+        try {
+            $req->execute([':promotion'=>$prom]);
+            $data = $req->fetchAll();
+            foreach($data as $k=>$d)
+            	$r = $r."[\"".$d['nom']."\",\"".$d['prenom']."\",\"".$d['cycle']."\",\"".$d['promotion']."\",\"".$d['groupe']."\"],";
+	    $r[strlen($r)-1]=' ';
+	    return $r."]"; 
+        } catch (\PDOException $ex) {
+            throw new Error("DatagridModel : erreur SQL{$ex->getMessage()}");
+        }
+    }
 }
