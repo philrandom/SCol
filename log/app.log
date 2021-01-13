@@ -94,3 +94,5 @@
 [2021-01-11T12:56:45.389673+00:00] f3il.ERROR: Page : clé inexistante eleves2 {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-11T13:05:16.365247+00:00] f3il.ERROR: Page : clé inexistante eleves2 {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-11T14:26:01.464505+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-13T15:03:09.902028+00:00] f3il.ERROR: DatagridModel : erreur SQLSQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':'I2' at line 1 {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/application/models/DatagridModel.php","line":37} []
+[2021-01-13T15:07:55.145480+00:00] f3il.ERROR: DatagridModel : erreur SQLSQLSTATE[HY093]: Invalid parameter number: no parameters were bound {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/application/models/DatagridModel.php","line":37} []
