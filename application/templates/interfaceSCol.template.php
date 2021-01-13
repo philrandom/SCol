@@ -12,23 +12,23 @@
 </head>
 
 <body>
+    <h1>Vie Scol template</h1>
+
     <div class="container">
-        <h1>Vie Scol template</h1>
-        <?php $this->insertModule("Logout"); ?>
-        <div>
-            <div>
+        <div class="row"><?php $this->insertModule("Logout"); ?></div>
+        <div class="row">
+            <div class="col-3">
                 <?php $this->insertModule("Interfacemail"); ?>
             </div>
-            <div>
-                
-            </div>
-            <div >
-            <?php $this->insertView(); ?>
+            <div class="col-9">
+                <?php $this->insertModule("Datagrid"); ?>
             </div>
         </div>
-        <?php $this->insertModule("Datagrid"); ?>
-        
-        <script src="assets/js/bootstrap.min.js"></script>
+    </div>
+
+
+
+    <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
