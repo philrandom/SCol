@@ -12,21 +12,26 @@
 </head>
 
 <body>
-    <h1>Prof template</h1>
+<?php $this->insertView(); ?>
 
-    <div class="container">
-        <div class="row">
+<div class="container">
+    <div class="row">
+        <div class="col-3">
             <?php $this->insertModule("Logout"); ?>
         </div>
-        <div class="row">
-            <div class="col-3">
-                <?php $this->insertModule("Interfacemail"); ?>
-            </div>
-            <div class="col-9">
-                <?php $this->insertModule("Datagrid"); ?>
-            </div>
+        <div class="col-9">
+            <p style="font-size: 15pt">Retrouvez tous vos relevés de notes, triés par statut.</br>
+
+                Voici <B>SCol</B>.
+            </p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-3">
+            <?php $this->insertModule("InterfacemailProf"); ?>
+        </div>
+    </div>
+</div>
 
 
 

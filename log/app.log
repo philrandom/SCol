@@ -125,3 +125,5 @@
 [2021-01-14T14:16:25.706067+00:00] f3il.ERROR: Controller : action indisponible 'accueil' pour le contrôleur app\controllers\IndexController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Controller.php","line":13} []
 [2021-01-14T15:05:01.022329+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\AccueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
 [2021-01-14T16:16:06.154695+00:00] f3il.ERROR: pas d'utlisateur {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Authentication.php","line":63} []
+[2021-01-14T17:58:33.152236+00:00] f3il.ERROR: Page : aucune classe ne correspond au module InterfacemailProf {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":87} []
+[2021-01-14T18:12:19.682541+00:00] f3il.ERROR: InterfacemailModel : erreur SQLSQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':'enseignant'' at line 1 {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/application/models/InterfacemailModel.php","line":60} []

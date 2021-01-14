@@ -7,8 +7,8 @@ use app\models\InterfacemailModel;
 <div id="error"></div>
 <div class="container">
   <form method="POST" id="form">
-    <div class="row" style="margin-bottom: 17px;">
-      <div class="col-4">
+    <div class="row justify-content-between" style="margin-bottom: 17px;">
+      <div class="col-5">
         <label>Cursus</label>
         <select class="form-select" id="cursus" aria-label="Default select example">
           <option selected>Choisissez le cursus</option>
@@ -18,7 +18,7 @@ use app\models\InterfacemailModel;
           ?>
         </select>
       </div>
-      <div class="col-4">
+      <div class="col-5">
         <label>Promotion</label>
         <select class="form-select" id="promotion" aria-label="Default select example">
           <option selected>Choisissez la promotion</option>
@@ -57,10 +57,25 @@ use app\models\InterfacemailModel;
         </div>
       </div>
     </div>
-    <div class="input-group mb-3">
-      <span class="input-group-text">Titre de l'épreuve</span>
-      <input type="text" class="form-control" id="titreexamen" placeholder="Thème de l'épreuve, Chapitre couvert lors du DS..." aria-label="typeexamen" aria-describedby="basic-addon1" required>
+    <div class="row">
+      <div class="col-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text">Titre de l'épreuve</span>
+          <input type="text" class="form-control" id="titreexamen" placeholder="Thème de l'épreuve, Chapitre couvert lors du DS..." aria-label="typeexamen" aria-describedby="basic-addon1" required>
+        </div>
+      </div>
+      <div class="col-8">
+        <label>Enseignant</label>
+        <select class="form-select" id="enseignant" aria-label="Default select example">
+          <option selected>Enseignant de la matière</option>
+          <?php
+          foreach (InterfacemailModel::getProf() as $prof)
+            echo '<option value="' . $prof . '">' . $prof . '</option>';
+          ?>
+        </select>
+      </div>
     </div>
+
     <button type="submit" class="btn btn-primary">Confirmer</button>
   </form>
 </div>

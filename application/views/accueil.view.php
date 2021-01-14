@@ -1,9 +1,1 @@
-<h2>Accueil View</h2>
-
-<?php
-$message = \f3il\Messenger::getMessage();
-if($message) :?>
-    <p>
-        <?php echo $message;?>
-    </p>
-<?php endif; ?>
+<p class="text-center" style="font-size: 35pt; margin: 29px">Votre interface de gestion de relevés. Bienvenue dans <B>SCol</B>.</p>

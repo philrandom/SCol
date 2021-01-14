@@ -12,20 +12,24 @@
 </head>
 
 <body>
-    <h1>Vie Scol template</h1>
+    <?php $this->insertView(); ?>
 
     <div class="container">
         <div class="row">
             <div class="col-3">
                 <?php $this->insertModule("Logout"); ?>
             </div>
-            <div class="col-5">
-                <p style="font-size: 15pt">Consultez les relevés de notes ou créez-en un nouveau.</br>Bienvenue dans <B>SCol</B>.</p>
+            <div class="col-9">
+                <p style="font-size: 15pt">Consultez les relevés de notes ou créez-en un nouveau.</br>
+                    Bénéficiez d'un accès rapide à la liste des élèves de l'école, filtrée par promotion.</br>
+                    Facilitez la réception des relevés et gardez un oeil sur les deadlines.</br>
+                    Voici <B>SCol</B>.
+                </p>
             </div>
         </div>
         <div class="row">
             <div class="col-3">
-            <?php $this->insertModule("BoutonCreationReleve"); ?>
+                <?php $this->insertModule("BoutonCreationReleve"); ?>
                 <?php $this->insertModule("Interfacemail"); ?>
             </div>
             <div class="col-9">
