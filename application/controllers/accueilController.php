@@ -40,4 +40,6 @@ class AccueilController extends \f3il\Controller
         $page = \f3il\Page::getInstance();
         $page->init('simple','creationReleve');
     }
+
+
 }

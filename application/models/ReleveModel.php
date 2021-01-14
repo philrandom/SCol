@@ -21,11 +21,16 @@ class ReleveModel
 		}
 	}
 
+	public static function getReleve($id) {
+		$sql =  'SELECT value->>"$.notes"'
+			.' from releves where id=:id';
+		return ReleveModel::req($sql,array(":id"=>$id));
+	}
 	public static function getByTag($flag,$prof_nom=NULL) {
 		if( !in_array($flag,self::$flags) ) {
 			throw new Error("ReleveModel : erreur d'entrée (flag invalide)");
 		}
-		$sql =  'SELECT id, value->"$.promotion", value->>"$.type", value->>"$.titre", value->>"$.prof_nom", value->>"$.date_a_rendre" '
+		$sql =  'SELECT id,value->>"$.tag_prof", value->>"$.promotion", value->>"$.type", value->>"$.titre", value->>"$.prof_nom", value->>"$.date_a_rendre" '
 			.' from releves';
 		if( $prof_nom == NULL ) {
 			/* Vie scolaire section 
