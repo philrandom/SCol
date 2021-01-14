@@ -19,7 +19,7 @@ use app\models\InterfacemailModel;
     <option selected>Choisissez la promotion</option>
     <?php
     foreach (InterfacemailModel::getPromotion() as $prom)
-      echo '<option value="'.$prom.'">'.$prom.'</option>';
+      echo '<option value="' . $prom . '">' . $prom . '</option>';
     ?>
   </select>
 

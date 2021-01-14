@@ -37,6 +37,7 @@ class AccueilController extends \f3il\Controller
     }
 
     public function creationAction() {
-        $page = \f3il\Page::getInstance();$page->init('simple','creationReleve');
+        $page = \f3il\Page::getInstance();
+        $page->init('simple','creationReleve');
     }
 }
