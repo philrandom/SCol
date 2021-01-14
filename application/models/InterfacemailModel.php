@@ -21,5 +21,24 @@ class InterfacemailModel
 		} catch (\PDOException $ex) {
 		    throw new Error("InterfacemailModel : erreur SQL{$ex->getMessage()}");
 		}
+	}
+	
+	public static function getCycle() {
+		return InterfacemailModel::getCycleGen();
+	}
+
+	public static function getCycleGen() {
+		$arr = array();
+		$db = \f3il\Database::getInstance();
+		$req = $db->prepare("SELECT DISTINCT cycle FROM eleves2 order by 1;");
+		try {
+		    $req->execute();
+		    $data = $req->fetchAll();
+		    foreach( $data as $cycle )
+			    $arr[] = $cycle['cycle'];
+		    return $arr;
+		} catch (\PDOException $ex) {
+		    throw new Error("InterfacemailModel : erreur SQL{$ex->getMessage()}");
+		}
 	}	
 }

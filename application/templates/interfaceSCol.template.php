@@ -25,7 +25,7 @@
         </div>
         <div class="row">
             <div class="col-3">
-            <?php $this->insertModule("CreationReleve"); ?>
+            <?php $this->insertModule("BoutonCreationReleve"); ?>
                 <?php $this->insertModule("Interfacemail"); ?>
             </div>
             <div class="col-9">

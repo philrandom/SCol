@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Création d'un relevé de notes</title>
 </head>
+
 <body>
-<h1>Template tout simple</h1>
-<?php $this->insertView();?>
-    
+    <h1>Template tout simple</h1>
+    <?php $this->insertView(); ?>
+    <?php $this->insertModule("BoutonRetourAccueil"); ?>
 </body>
+
 </html>

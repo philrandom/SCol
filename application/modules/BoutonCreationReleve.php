@@ -4,7 +4,7 @@ namespace app\modules;
 
 use f3il\Authentication;
 
-class CreationReleve implements \f3il\Module
+class BoutonCreationReleve implements \f3il\Module
 {
     public function render()
     {
