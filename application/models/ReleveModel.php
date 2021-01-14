@@ -25,7 +25,7 @@ class ReleveModel
 		if( !in_array($flag,self::$flags) ) {
 			throw new Error("ReleveModel : erreur d'entrée (flag invalide)");
 		}
-		$sql =  'SELECT value->"$.promotion", value->>"$.type", value->>"$.titre", value->>"$.prof_nom", value->>"$.date_a_rendre" '
+		$sql =  'SELECT id, value->"$.promotion", value->>"$.type", value->>"$.titre", value->>"$.prof_nom", value->>"$.date_a_rendre" '
 			.' from releves';
 		if( $prof_nom == NULL ) {
 			/* Vie scolaire section 
