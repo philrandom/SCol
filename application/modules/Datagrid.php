@@ -13,20 +13,20 @@ class Datagrid implements \f3il\Module
         <div id="wrapper5"></div>
         <script>
             new gridjs.Grid({
-<?php
-	if(isset($_GET['prom']) ) 
-	    print_r(	'columns: ["Nom", "Prénom", "Cycle", "Promotion", "Groupe"], ');
-	else if(isset($_GET['releve']))
-            print_r( 'columns: ["Nom", "Prénom", "Note"], ');
-?>
+                <?php
+                if (isset($_GET['prom']))
+                    print_r('columns: ["Nom", "Prénom", "Cycle", "Promotion", "Groupe"], ');
+                else if (isset($_GET['releve']))
+                    print_r('columns: ["Nom", "Prénom", "Note"]');
+                ?>
                 search: true,
                 sort: true,
-		data: <?php 
-			if(isset($_GET['prom']) ) 
-				echo DatagridModel::getElevesFromPromo($_GET['prom']);
-			else if(isset($_GET['releve']))
-				print_r(DatagridModel::getReleve($_GET['releve']));
-		?>,
+                data: <?php
+                        if (isset($_GET['prom']))
+                            echo DatagridModel::getElevesFromPromo($_GET['prom']);
+                        else if (isset($_GET['releve']))
+                            print_r(DatagridModel::getReleve($_GET['releve']));
+                        ?>,
                 pagination: {
                     enabled: true,
                     limit: 20,
