@@ -12,14 +12,16 @@
 </head>
 
 <body>
-    <h1>Admin template</h1>
+<h1>templateadmin</h1>
 
     <div class="container">
         <div class="row">
-            <?php $this->insertModule("Logout"); ?>
+            <div class="col-3">
+                <?php $this->insertModule("Logout"); ?>
+            </div>
         </div>
     </div>
-
+    <?php $this->insertView(); ?>
     <script src="assets/js/bootstrap.min.js"></script>
 </body>
 

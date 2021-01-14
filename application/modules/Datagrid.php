@@ -17,7 +17,7 @@ class Datagrid implements \f3il\Module
                 if (isset($_GET['prom']))
                     print_r('columns: ["Nom", "Prénom", "Cycle", "Promotion", "Groupe"], ');
                 else if (isset($_GET['releve']))
-                    print_r('columns: ["Nom", "Prénom", "Note"]');
+                    print_r('columns: ["Nom", "Prénom", "Note"],');
                 ?>
                 search: true,
                 sort: true,

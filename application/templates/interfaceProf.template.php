@@ -30,6 +30,9 @@
         <div class="col-3">
             <?php $this->insertModule("InterfacemailProf"); ?>
         </div>
+        <div class="col-3">
+            <?php $this->insertModule("Datagrid"); ?>
+        </div>
     </div>
 </div>
 
