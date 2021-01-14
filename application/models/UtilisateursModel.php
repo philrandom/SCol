@@ -3,7 +3,8 @@ namespace app\models;
 
 use Error;
 use f3il\Database;
-use \f3il\errors\SqlError;
+use f3il\errors\SqlError;
+use f3il\Authentication;
 
 class UtilisateursModel implements \f3il\AuthenticationInterface
 {
@@ -62,17 +63,19 @@ class UtilisateursModel implements \f3il\AuthenticationInterface
     }
 
     public static function insert($data) {
-        $expectedKeys = ['identifiant','type'];
+        $hash = Authentication::getInstance();
+        $expectedKeys = ['identifiant','type','motdepasse'];
         $missingKeys = array_diff($expectedKeys, array_keys($data));
         foreach($missingKeys as $key) {
             throw new Error("MaterielsModel : '$key' ne figure pas dans les données transmises");
         }
         $pdo = Database::getInstance();
 
-        $req = $pdo->prepare("INSERT INTO Utilisateurs (identifiant, type) "."VALUES (:identifiant, :type)");
+        $req = $pdo->prepare("INSERT INTO Utilisateurs (identifiant, type, motdepasse) "."VALUES (:identifiant, :type, :motdepasse)");
         try {
             $req->bindValue(':identifiant',$data['identifiant']);
             $req->bindValue(':type',$data['type']);
+            $req->bindValue(':motdepasse',$hash->hash($data['motdepasse']));
             $req->execute();
         } catch(\PDOException $ex) {
             throw new SQLError("MaterielsModel : erreur SQL {$ex->getMessage()}",$req);
@@ -81,7 +84,7 @@ class UtilisateursModel implements \f3il\AuthenticationInterface
     }
 
     public static function update($id, $data) {
-        $expectedKeys = ['identifiant','type'];
+        $expectedKeys = ['identifiant','type','motdepasse'];
         $missingKeys = array_diff($expectedKeys, array_keys($data));
         foreach($missingKeys as $key) {
             throw new Error("MaterielsModel : '$key' ne figure pas dans les données transmises");
@@ -95,6 +98,7 @@ class UtilisateursModel implements \f3il\AuthenticationInterface
         try {
             $req->bindValue(':identifiant',$data['identifiant']);
             $req->bindValue(':type',$data['type']);
+            $req->bindValue(':motdepasse',$data['motdepasse']);
             $req->bindValue(':id',$id);
             $req->execute();
         } catch(\PDOException $ex) {

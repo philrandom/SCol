@@ -148,3 +148,8 @@
 [2021-01-14T21:01:06.325843+00:00] f3il.ERROR: Page : clé inexistante type {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-14T21:01:22.264159+00:00] f3il.ERROR: Page : clé inexistante identifiant {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-14T21:02:57.461408+00:00] f3il.ERROR: Page : clé inexistante identifiant {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
+[2021-01-14T21:08:54.747462+00:00] f3il.ERROR: Page : clé inexistante identifiant {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
+[2021-01-14T21:18:45.139893+00:00] f3il.ERROR: MaterielsModel : erreur SQL SQLSTATE[HY000]: General error: 1364 Field 'motdepasse' doesn't have a default value {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/application/models/UtilisateursModel.php","line":78} []
+[2021-01-14T21:22:19.268861+00:00] f3il.ERROR: Page : clé inexistante motdepasse {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
+[2021-01-14T21:22:38.001784+00:00] f3il.ERROR: Page : clé inexistante motdepasse {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
+[2021-01-14T21:30:57.506858+00:00] f3il.ERROR: Page : clé inexistante motdepasse {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []

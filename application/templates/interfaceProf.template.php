@@ -28,9 +28,9 @@
     </div>
     <div class="row">
         <div class="col-3">
-            <?php $this->insertModule("InterfacemailProf"); ?>
+            <?php $this->insertModule("Interfacemail"); ?>
         </div>
-        <div class="col-3">
+        <div class="col-9">
             <?php $this->insertModule("Datagrid"); ?>
         </div>
     </div>

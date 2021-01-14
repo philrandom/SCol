@@ -26,6 +26,8 @@ class ReleveModel
 			.' from releves where id=:id';
 		return ReleveModel::req($sql,array(":id"=>$id));
 	}
+
+	
 	public static function getByTag($flag,$prof_nom=NULL) {
 		if( !in_array($flag,self::$flags) ) {
 			throw new Error("ReleveModel : erreur d'entrée (flag invalide)");

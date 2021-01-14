@@ -6,6 +6,7 @@ use f3il\Messenger;
 use app\models\DatagridModel;
 use app\models\UtilisateursModel;
 use f3il\Error;
+use f3il\Authentication;
 
 class AccueilController extends \f3il\Controller
 {
@@ -50,8 +51,9 @@ class AccueilController extends \f3il\Controller
         $page->init('interfaceAdmin','user-form');
 
         // Préparation des données
-        $page->description = $data["identifiant"];
-        $page->ip = $data["type"];
+        $page->identifiant = $data["identifiant"];
+        $page->type = $data["type"];
+        $page->motdepasse = $data["motdepasse"];
 
         // Si le formulaire n'est pas envoyé
         if($_SERVER['REQUEST_METHOD']!=='POST') {
@@ -66,14 +68,19 @@ class AccueilController extends \f3il\Controller
         // Récuparation des données
         $page->identifiant = filter_input(INPUT_POST,'identifiant');
         $page->type = filter_input(INPUT_POST,'type');
+        $page->motdepasse = filter_input(INPUT_POST,'motdepasse');
 
         // Validation des données
         if(strlen(trim($page->identifiant)) < 3) {
             $page->formMessage = "Erreur : veuillez fournir un identifiant de 3 caractères minimum";
             return;
         }
-        if(filter_var($page->type) !== "administrateur" || filter_var($page->type) !== "enseignant" || filter_var($page->type) !== "viescolaire") {
+        if(filter_var($page->type) !== "administrateur" && filter_var($page->type) !== "enseignant" && filter_var($page->type) !== "viescolaire") {
             $page->formMessage = "Erreur : veuillez fournir un type d'utilisateur valide : administrateur, enseignant ou viescolaire";
+            return;
+        }
+        if(strlen(trim($page->motdepasse)) < 5) {
+            $page->formMessage = "Erreur : veuillez fournir un mot de passe de 5 caractères minimum";
             return;
         }
 
@@ -87,12 +94,14 @@ class AccueilController extends \f3il\Controller
         $this->formulaire(
             [
                 "identifiant" => "",
-                "type" => ""
+                "type" => "",
+                "motdepasse" => ""
             ],
             function ($page) {
                 UtilisateursModel::insert([
                     "identifiant" => $page->identifiant,
-                    "type" => $page->type
+                    "type" => $page->type,
+                    "motdepasse" => $page->motdepasse
                 ]);
                 Messenger::setMessage("Utilisateur \"{$page->identifiant}\" enregistré");
             },
@@ -116,7 +125,8 @@ class AccueilController extends \f3il\Controller
             function ($page) use ($id) {
                 UtilisateursModel::update($id,[
                     "identifiant" => $page->identifiant,
-                    "type" => $page->type
+                    "type" => $page->type,
+                    "motdepasse" => $page->motdepasse
                 ]);
                 Messenger::setMessage("Utilisateur \"{$page->description}\" modifié");
             },
