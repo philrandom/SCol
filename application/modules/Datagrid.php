@@ -14,6 +14,7 @@ class Datagrid implements \f3il\Module
         <script>
             new gridjs.Grid({
                 columns: ["Nom", "Prénom", "Cycle", "Promotion", "Groupe"],
+                search: true,
                 sort: true,
                 data: <?php echo DatagridModel::getElevesFromPromo($_GET['prom']); ?>,
                 pagination: {
@@ -22,6 +23,8 @@ class Datagrid implements \f3il\Module
                     summary: false
                 }
             }).render(document.getElementById("wrapper5"));
+            grid.on('rowClick', (...args) => console.log('row: ' + JSON.stringify(args), args));
+            grid.on('cellClick', (...args) => console.log('cell: ' + JSON.stringify(args), args));
         </script>
 <?php
     }
