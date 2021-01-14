@@ -15,9 +15,17 @@
     <h1>Vie Scol template</h1>
 
     <div class="container">
-        <div class="row"><?php $this->insertModule("Logout"); ?></div>
         <div class="row">
             <div class="col-3">
+                <?php $this->insertModule("Logout"); ?>
+            </div>
+            <div class="col-5">
+                <h4>Consultez les relevés de notes ou créez-en un nouveau.</br>Bienvenue dans SCol.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+            <?php $this->insertModule("CreationReleve"); ?>
                 <?php $this->insertModule("Interfacemail"); ?>
             </div>
             <div class="col-9">

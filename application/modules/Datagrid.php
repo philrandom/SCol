@@ -21,6 +21,11 @@ class Datagrid implements \f3il\Module
                     enabled: true,
                     limit: 20,
                     summary: false
+                },
+                language: {
+                    'search': {
+                        'placeholder': ' Recherche...'
+                    }
                 }
             }).render(document.getElementById("wrapper5"));
             grid.on('rowClick', (...args) => console.log('row: ' + JSON.stringify(args), args));

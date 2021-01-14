@@ -15,7 +15,9 @@
     <h1>Prof template</h1>
 
     <div class="container">
-        <div class="row"><?php $this->insertModule("Logout"); ?></div>
+        <div class="row">
+            <?php $this->insertModule("Logout"); ?>
+        </div>
         <div class="row">
             <div class="col-3">
                 <?php $this->insertModule("Interfacemail"); ?>
