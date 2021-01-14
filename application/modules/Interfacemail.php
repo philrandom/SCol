@@ -47,8 +47,6 @@ class Interfacemail implements \f3il\Module
       <?php
       foreach (InterfacemailModel::getPromotion() as $prom)
         echo '<div class="accordion-body"><a href="?controller=accueil&action=accueil&prom='.$prom.'">' . $prom . '</a></div>';
-  
-
       ?>
         </div>
       </div>

@@ -20,7 +20,7 @@
                 <?php $this->insertModule("Logout"); ?>
             </div>
             <div class="col-5">
-                <h4>Consultez les relevés de notes ou créez-en un nouveau.</br>Bienvenue dans SCol.</h4>
+                <p style="font-size: 15pt">Consultez les relevés de notes ou créez-en un nouveau.</br>Bienvenue dans <B>SCol</B>.</p>
             </div>
         </div>
         <div class="row">

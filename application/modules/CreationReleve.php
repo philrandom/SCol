@@ -9,7 +9,7 @@ class CreationReleve implements \f3il\Module
     public function render()
     {
 ?>
-        <div class="card">
+        <div class="card" style="margin-bottom: 25px;">
             <div class="card-header">
                 Création d'un nouveau relevé
             </div>

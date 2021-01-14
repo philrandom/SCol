@@ -35,4 +35,8 @@ class AccueilController extends \f3il\Controller
 
         $page->eleveList = DatagridModel::getAll();
     }
+
+    public function creationAction() {
+        $page = \f3il\Page::getInstance();$page->init('simple','creationReleve');
+    }
 }
