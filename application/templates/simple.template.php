@@ -19,4 +19,37 @@
     <?php $this->insertModule("BoutonRetourAccueil"); ?>
 </body>
 
+<script>
+    const cursus = document.getElementById('cursus')
+    const promotion = document.getElementById('promotion')
+    const form = document.getElementById('form')
+    const errorElement = document.getElementById('error')
+    form.addEventListener('submit', (e) => {
+        let messages = []
+        if (cursus.value === 'CPi') {
+            if (promotion.value !== '1' || promotion.value !== '2') {
+                alert('Choisissez une promotion valide pour le cursus CPi')
+            }
+        }
+        if (cursus.value === '3iL Ing') {
+            if (promotion.value !== 'I1' || promotion.value !== 'I2' || promotion.value !== 'I3') {
+                alert('Choisissez une promotion valide pour le cursus 3iL Ingénieurs')
+            }
+        }
+        if (cursus.value === 'Bc Info') {
+            if (promotion.value !== 'B3') {
+                alert('Choisissez une promotion valide pour le cursus Bc Info')
+            }
+        }
+        if (cursus.value === 'Ms Info') {
+            if (promotion.value !== 'M1' || promotion.value !== 'M2') {
+                alert('Choisissez une promotion valide pour le cursus Master')
+            }
+        }
+        if (promotion.value == 'Choisissez la promotion' || cursus.value == 'Choisissez le cursus') {
+            alert('Veuillez remplir tous les champs')
+        }
+    })
+</script>
+
 </html>
