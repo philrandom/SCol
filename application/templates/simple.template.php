@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <h1>Template tout simple</h1>
     <?php $this->insertView(); ?>
     <?php $this->insertModule("BoutonRetourAccueil"); ?>
 </body>

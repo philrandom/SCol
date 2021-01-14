@@ -124,3 +124,4 @@
 [2021-01-14T14:16:13.910506+00:00] f3il.ERROR: Controller : action indisponible 'accueil' pour le contrôleur app\controllers\IndexController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Controller.php","line":13} []
 [2021-01-14T14:16:25.706067+00:00] f3il.ERROR: Controller : action indisponible 'accueil' pour le contrôleur app\controllers\IndexController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Controller.php","line":13} []
 [2021-01-14T15:05:01.022329+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\AccueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-14T16:16:06.154695+00:00] f3il.ERROR: pas d'utlisateur {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Authentication.php","line":63} []
