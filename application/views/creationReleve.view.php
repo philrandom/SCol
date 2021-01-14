@@ -3,9 +3,9 @@
 use app\models\InterfacemailModel;
 ?>
 
-<h2>Création d'un relevé de notes.</h2>
 <div id="error"></div>
 <div class="container">
+  <h2 class="mb-5">Création d'un nouveau relevé de notes.</h2>
   <form method="POST" id="form">
     <div class="row justify-content-between" style="margin-bottom: 17px;">
       <div class="col-5">
@@ -65,7 +65,6 @@ use app\models\InterfacemailModel;
         </div>
       </div>
       <div class="col-8">
-        <label>Enseignant</label>
         <select class="form-select" id="enseignant" aria-label="Default select example">
           <option selected>Enseignant de la matière</option>
           <?php
@@ -75,7 +74,7 @@ use app\models\InterfacemailModel;
         </select>
       </div>
     </div>
-
-    <button type="submit" class="btn btn-primary">Confirmer</button>
+    <a href="?controller=accueil&action=accueil" class="btn btn-danger">Retour</a>
+    <button type="submit" class="btn btn-success">Confirmer</button>
   </form>
 </div>

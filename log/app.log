@@ -153,3 +153,6 @@
 [2021-01-14T21:22:19.268861+00:00] f3il.ERROR: Page : clé inexistante motdepasse {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-14T21:22:38.001784+00:00] f3il.ERROR: Page : clé inexistante motdepasse {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
 [2021-01-14T21:30:57.506858+00:00] f3il.ERROR: Page : clé inexistante motdepasse {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
+[2021-01-14T22:38:24.203727+00:00] f3il.ERROR: Page : clé inexistante utilisateur {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":70} []
+[2021-01-14T23:21:40.024469+00:00] f3il.ERROR: Page : aucune classe ne correspond au module BoutonRetourAccueil {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":87} []
+[2021-01-14T23:34:15.779401+00:00] f3il.ERROR: Controller : action indisponible 'insert_releve' pour le contrôleur app\controllers\AccueilController {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Controller.php","line":13} []

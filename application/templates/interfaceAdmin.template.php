@@ -12,17 +12,30 @@
 </head>
 
 <body>
-<h1>templateadmin</h1>
+   
+    <body>
+    <p class="text-center" style="font-size: 35pt; margin: 29px">Bonjour. Bienvenue dans <B>SCol</B>.</p>
+
 
     <div class="container">
         <div class="row">
             <div class="col-3">
                 <?php $this->insertModule("Logout"); ?>
             </div>
+            <div class="col-9">
+                <p style="font-size: 15pt">En tant qu'administrateur, vous avez le plus haut niveau de droits.</br>
+                    Gérez les utilisateurs, créez-en de nouveau, modifiez les mots de passe et les types.</br>
+                    Voici <B>SCol</B>.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <?php $this->insertView(); ?>
+            </div>
         </div>
     </div>
-    <?php $this->insertView(); ?>
+
     <script src="assets/js/bootstrap.min.js"></script>
 </body>
-
 </html>

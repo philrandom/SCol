@@ -52,7 +52,7 @@ class UtilisateursModel implements \f3il\AuthenticationInterface
 
     public static function getAllUsers() {
         $pdo = Database::getInstance();
-        $req = $pdo->prepare("SELECT * FROM utilisateurs ORDER BY identifiant");
+        $req = $pdo->prepare("SELECT * FROM utilisateurs ORDER BY type");
         try {
             $req->execute();
             $data = $req->fetchAll();
@@ -91,8 +91,8 @@ class UtilisateursModel implements \f3il\AuthenticationInterface
         }
         $pdo = Database::getInstance();
 
-        $req = $pdo->prepare("UPDATE Utilisateurs SET ".
-            "identifiant = :identifiant, type = :type ".
+        $req = $pdo->prepare("UPDATE utilisateurs SET ".
+            "identifiant = :identifiant, type = :type , motdepasse = :motdepasse".
             "WHERE id = :id"        
         );
         try {
@@ -102,7 +102,7 @@ class UtilisateursModel implements \f3il\AuthenticationInterface
             $req->bindValue(':id',$id);
             $req->execute();
         } catch(\PDOException $ex) {
-            throw new Error("MaterielsModel : erreur SQL {$ex->getMessage()}");
+            throw new Error("UtilisateursModel : erreur SQL {$ex->getMessage()}");
         }
     }
 

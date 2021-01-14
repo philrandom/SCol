@@ -15,14 +15,16 @@
 
 <body>
     <?php $this->insertView(); ?>
-    <?php $this->insertModule("BoutonRetourAccueil"); ?>
+    <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 <script>
     const cursus = document.getElementById('cursus')
     const promotion = document.getElementById('promotion')
+    const enseignant = document.getElementById('enseignant')
     const form = document.getElementById('form')
     const errorElement = document.getElementById('error')
+
     form.addEventListener('submit', (e) => {
         let messages = []
         if (cursus.value === 'CPi') {
@@ -45,7 +47,7 @@
                 alert('Choisissez une promotion valide pour le cursus Master')
             }
         }
-        if (promotion.value == 'Choisissez la promotion' || cursus.value == 'Choisissez le cursus') {
+        if (promotion.value == 'Choisissez la promotion' || cursus.value == 'Choisissez le cursus' || enseignant.value == 'Enseignant de la matière') {
             alert('Veuillez remplir tous les champs')
         }
     })
