@@ -47,15 +47,24 @@ class DatagridModel
     	}
 
 	public static function getElevesFromPromo($prom) {
-	$sql = "SELECT nom, prenom, cycle, promotion, groupe FROM eleves2 WHERE promotion=:promotion";
-	return 	DatagridModel::export(
-			DatagridModel::req(
-				$sql,array(':promotion'=>$prom)),
-				array('nom','prenom','cycle','promotion','groupe')
-		);
+		$sql = "SELECT nom, prenom, cycle, promotion, groupe FROM eleves2 WHERE promotion=:promotion";
+		return 	DatagridModel::export(
+				DatagridModel::req(
+					$sql,array(':promotion'=>$prom)),
+					array('nom','prenom','cycle','promotion','groupe')
+			);
 	}
 
+/*	public static function getByTag($flag) {
+		$data = ReleveModel::getByTag($flag);
+		var_dump $data;
 
+		return 	DatagridModel::export(
+				DatagridModel::req(
+					$sql,array(':promotion'=>$prom)),
+					array('nom','prenom','cycle','promotion','groupe')
+		);
+}*/
     
 
 

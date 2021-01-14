@@ -114,3 +114,7 @@
 [2021-01-13T15:23:30.051677+00:00] f3il.ERROR: Page : fichier de template introuvable../application/templates/interfaceProf.template.php {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":43} []
 [2021-01-13T15:23:30.659119+00:00] f3il.ERROR: Page : fichier de template introuvable../application/templates/interfaceProf.template.php {"file":"/Users/yanisfatmi/Documents/GitHub/SCol/f3il/Page.php","line":43} []
 >>>>>>> Stashed changes
+[2021-01-14T09:40:47.402738+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-14T09:40:58.487348+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-14T09:41:09.265874+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []
+[2021-01-14T09:41:15.373027+00:00] f3il.ERROR: Application : contrôleur introuvable app\controllers\accueilController {"file":"/usr/local/www/SCol/f3il/Application.php","line":70} []

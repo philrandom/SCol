@@ -25,12 +25,17 @@ class ReleveModel
 		if( !in_array($flag,self::$flags) ) {
 			throw new Error("ReleveModel : erreur d'entrée (flag invalide)");
 		}
-		$sql =  'SELECT value->"$.promotion", value->"$.prof_nom", value->"$.date_a_rendre" '
-			.' from releves'
-			.' where value->>"$.tag" like :flag';
-		if( $prof_nom == NULL )
+		$sql =  'SELECT value->"$.promotion", value->>"$.type", value->>"$.titre", value->>"$.prof_nom", value->>"$.date_a_rendre" '
+			.' from releves';
+		if( $prof_nom == NULL ) {
+			/* Vie scolaire section 
+			 * Nouveau : releve rendu par enseingant */
+			$sql = $sql.' where value->>"$.tag_vs" like :flag';
 			return ReleveModel::req($sql,array(":flag"=>$flag));
-		else {
+		} else {
+			/* Prof section
+			 * Nouveau : pas de note encore entrée */
+			$sql = $sql.' where value->>"$.tag_prof" like :flag';
 			$sql = $sql.' and value->>"$.prof_nom" like :prof_nom';
 			return ReleveModel::req($sql,array(":flag"=>$flag,":prof_nom"=>$prof_nom));
 		}
