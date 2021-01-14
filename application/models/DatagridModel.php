@@ -1,6 +1,7 @@
 <?php
 namespace app\models;
 use f3il\Error;
+use app\models\ReleveModel;
 
 class DatagridModel
 {
@@ -54,6 +55,20 @@ class DatagridModel
 					array('nom','prenom','cycle','promotion','groupe')
 			);
 	}
+
+	public static function getReleve($id) {
+		
+		$data = str_replace("}","]",str_replace("{","[",ReleveModel::getReleve($id)[0]['value->>"$.notes"']));
+		$data = str_replace("\"nom\":","",$data);
+		$data = str_replace("\"prenom\":","",$data);
+		$data = str_replace("\"note\":","",$data);
+		return $data;
+		/*return 	DatagridModel::export(
+					$data,
+					array('nom','prenom','note')
+		);*/
+	}
+
 
 /*	public static function getByTag($flag) {
 		$data = ReleveModel::getByTag($flag);

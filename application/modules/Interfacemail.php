@@ -28,8 +28,11 @@ class Interfacemail implements \f3il\Module
         <div id="flush-collapse<?php echo $flag; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
           <?php
 
-          foreach (ReleveModel::getByTag(str_replace("_", " ", $flag), $user["identifiant"]) as $line)
-            print_r("<div class='accordion-body'><a href=#>" . $line['value->>"$.type"'] . " : " . $line['value->>"$.titre"'] . "</a></div>");
+          foreach (ReleveModel::getByTag(str_replace("_", " ", $flag), $user["identifiant"]) as $line) {
+		  print_r("<div class='accordion-body'><a href='?controller=accueil&action=");
+		  echo ($line['value->>"$.tag_prof"']=="Traité") ? "accueil" : "insert_releve" ;
+		  print_r("&releve=".$line["id"]."'>" . $line['value->>"$.type"'] . " : " . $line['value->>"$.titre"'] . "</a></div>");
+	  }
           ?>
         </div>
       </div>
